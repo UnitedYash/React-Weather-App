@@ -4,6 +4,8 @@
     border-radius: 10px;
     background-image: linear-gradient(45deg, #2d388a,#00aeef);
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
 }
 .search-bar {
@@ -12,10 +14,24 @@
     align-items: center;
 }
 input {
-    border-radius: 40px;
+    border-radius: 20px;
     padding-left: 25px;
     border: none;
     height: 50px;
     outline: none;
     cursor: pointer;
+}
+.submit-button {
+    border-radius: 30px;
+    margin-left: 10px;
+    height: 50px;
+    width: 60px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+img { 
+    border-radius: 20px;
+    border-color: black;
 }
