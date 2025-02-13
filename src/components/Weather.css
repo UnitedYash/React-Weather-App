@@ -2,16 +2,44 @@
     padding: 50px;
     place-self: center;
     border-radius: 10px;
-    background-image: linear-gradient(45deg, #2d388a,#00aeef);
+    background-image: linear-gradient(45deg, #000428, #004e92);
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    font-weight: 900;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    color: #ffd700; /* Gold */
+    text-shadow: 0 0 10px #ffd700, 0 0 20px #ffb700, 0 0 40px #cc9500;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
 }
+.weather img {
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8)); /* Soft glow */
+}
+.weather:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+}
+.weather img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #00ffff; }
+    50% { text-shadow: 0 0 20px #00ffff; }
+    100% { text-shadow: 0 0 10px #00ffff; }
+}
+.weather {
+    animation: glow 2s infinite alternate;
+}
+
 .search-bar {
     border-radius: 30px;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 input {
     border-radius: 20px;
@@ -34,4 +62,32 @@ input {
 img { 
     border-radius: 20px;
     border-color: black;
+}
+
+.other-info {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.wind-speeds, .humidity {
+    background-image: linear-gradient(10deg, #09203F,#537895);
+    border-radius: 20px;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 900;
+    color: bisque;
+    gap: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 10px;
+
+}
+.wind-speeds:hover, .humidity:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
 }
