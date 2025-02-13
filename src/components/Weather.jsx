@@ -10,7 +10,7 @@ const Weather = () => {
             <input type='text' placeholder='Enter City Name' />
             <button className='submit-button'>Search</button>
         </div>
-        <img src={snow} alt='snow' width="70px" height="70px" />
+        <img src={snow} alt='snow' width="100px" height="100px" />
         <p>1°C</p>
         <p>Toronto</p>
         <div className='other-info'>

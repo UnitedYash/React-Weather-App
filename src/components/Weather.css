@@ -46,6 +46,7 @@ input {
     padding-left: 25px;
     border: none;
     height: 50px;
+    width: 250px;
     outline: none;
     cursor: pointer;
 }
