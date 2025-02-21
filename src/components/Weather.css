@@ -13,11 +13,17 @@
     color: #ffd700; /* Gold */
     text-shadow: 0 0 10px #ffd700, 0 0 20px #ffb700, 0 0 40px #cc9500;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-
+    width: auto;
+    height: auto;
+    min-width: 200px;
+    min-height: 150px;
+    max-width: 90vw;
+    max-height: 80vh;
 }
 .weather img {
     filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8)); /* Soft glow */
 }
+
 .weather:hover {
     transform: scale(1.03);
     box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
@@ -49,6 +55,15 @@ input {
     width: 250px;
     outline: none;
     cursor: pointer;
+}
+input:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+
+}
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
 }
 .submit-button {
     border-radius: 30px;

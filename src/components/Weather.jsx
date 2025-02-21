@@ -6,20 +6,20 @@ import windyImage from "../assets/windy.png";
 import humidityImage from "../assets/humidity.png";
 
 
-
 const Weather = () => {
 
   const [data, setData] = useState({});
-  const [location, setLocation] = useState("Toronto");
-  const URL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid={apiKey}`;
+  const [location, setLocation] = useState("");
+  const apiKey = import.meta.env.VITE_WEATHER_API;
+
+  const URL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${apiKey}`;
   const searchLocation = (event) => {
     axios.get(URL).then((response) => {
       setData(response.data);
-      console.log(response.data);
       setLocation("");
-
     })
   }
+  //Start of new branch
 
 
   return (
@@ -35,7 +35,7 @@ const Weather = () => {
             <button className='submit-button' onClick={searchLocation}>Search</button>
         </div>
         <img src={snow} alt='snow' width="100px" height="100px" />
-        <p>{data?.main?.temp} °C</p>
+        <p>{Math.round(data?.main?.temp)} °C</p>
         <p>{data.name}</p>
         <div className='other-info'>
           <div className="wind-speeds">
